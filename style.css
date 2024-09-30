@@ -1,62 +1,61 @@
-#keys{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding: 25px;
+#keys{ /* ez egy id*/
+    display: grid; /*A keys idét videlő elemek rácsos szerkezetbe rendeződnek */
+    grid-template-columns: repeat(4, 1fr);/*Ezzel tudjuk megadni, hogy a rácsos szerkezetben egy sorban hány elem legyen */
+    gap: 10px;/*Ezzel adjuk meg, hogy Két elem között mekkora legyen a távolság */
+    padding: 25px;/*Szegélyektől való távolság */ 
 }
 
-button{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    border: none;
-    background-color: hsl(0, 0%, 30%);
-    color: white;
-    font-size:3rem ;
-    font-weight: bold;
-    cursor: pointer;
+button{/*ide azért nincs szükség .-ra vagy #-re mert ez egy beépített HTML tag*/
+    width: 100px;/*gombok szélessége*/
+    height: 100px;/*gombok magassága*/
+    border-radius: 50px;/*szegélyek lekerekítettsége*/
+    border: none;/*szegélyek*/
+    background-color: #99ccff;/*gombok színe (számokat leszámítva)*/
+    color: #0a507c;/*számok és jelek színe*/
+    font-size:2.5rem ;/*számok mérete*/
+    font-weight: bold;/*számok típusa(félkövér)*/
+    cursor: pointer;/*amikor az egér rámegy egy gombra megváltozik*/
 }
 #calculator{
-    font-family: Arial;
-    background-color: hsl(0, 0%, 15%);
-    border-radius:15px ;
-    max-width: 500px;
-    overflow: hidden;
+    background-color: #3366ff;/*a számológép testének színe*/
+    border-radius:15px ;/*szeélyek lekerekítettsége*/
+    max-width: 500px;/*maximum szélesség*/
+    overflow: hidden;/*ha van olyan elem (például szám a displaynél) ami túlmenne a megadott határokon, az tűnnyön el*/
 }
 
 #display{
-    width: 100%;
-    padding: 20px;
-    font-size: 5rem;
-    text-align: left;
-    border: none;
-    background-color: hsl(0, 0%, 20%);
-    color: white;
+    width: 100%;/*szélesség*/
+    padding: 20px;/*szegélytől való távolság*/
+    font-size: 5rem;/*elemek mérete*/
+    text-align: left;/*a megjelenő számok igazítása*/
+    border: none;/*szegélyek*/
+    background-color: #5588ff;/*display színe*/
+    color: #bbeeff;/*displayben megjelenő számok színe*/
 }
 body{
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: hsl(0, 0%, 95%);
+    margin: 0;/*margók*/
+    display: flex;/*könyebben elrendezhetők a body-n belül elhelyezkedő elemek*/
+    justify-content: center;/*a főtengelyek mentén középre helyezi az elemekt*/
+    align-items: center;/* középre helyezi az elemekt*/
+    height: 100vh;/*viewport height magasság, az adott elem pontosan a böngészőablak teljes magasságával lesz egyenlő*/
+    background-color: #bbeeff;/*a body háttérszíne*/
 }
 
-button:hover{
-    background-color: hsl(0, 0%, 40%); 
+button:hover{/*Ez akkor lép életbe, ha az egérmutató egy gomb fölött van*/
+    background-color: #89CFF0; 
 }
 
-button:active{
-    background-color: hsl(0, 0%, 50%); 
+button:active{/*Ez akkor lép életbe, ha egy gomb le van nyomva*/
+    background-color:#9fdefb; 
 }
-.operator-btn{
-    background-color: orange;
-}
-
-.operator-btn:hover{
-    background-color: rgb(149, 97, 0);
+.operator-btn{/*Ez a műveletgombok színének megváltoztatása*/
+    background-color: #ffa500 ;
 }
 
-.operator-btn:active{
-    background-color: rgb(99, 68, 10);
+.operator-btn:hover{/*A a műveletgomb fölött lebeg az egérmutató*/
+    background-color: #ffae42;
+}
+
+.operator-btn:active{/*Ha a műveletgomb le van nyomva*/
+    background-color: #ffbf00;
 }

@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- CSS belinkelése a HTML-be -->
     <title>Document</title>
 </head>
 <body>
+        <!-- id-k megadása(id: olyan egyedi jelző, amire css-ben,JavaScriptben stb. lehet hivatkozni ha szeretnénk megváltoztatni valamit azon a részen amire ráraktuk) -->
+        <!-- class-ok megadása(class: olyan jelző ami gyakorlatilag ugyan olyan mint az id csak ezt egyszerre több elemre is fel lehet rakni ) -->
         <div id="calculator">
-            <input id="display" readonly>
+            <input id="display" readonly><!-- readonly: Nem lehet bele írni --> 
             <div id="keys">
+                <!-- Onlick: JavaScirpt függvény amellyel meg lehet hívni például egy függvényt ami a gomb megnyomásakor aktiválódik -->
                 <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
                 <button onclick="appendToDisplay('7')">7</button>
                 <button onclick="appendToDisplay('8')">8</button>
@@ -27,9 +30,11 @@
                 <button onclick="appendToDisplay('.')">.</button>
                 <button onclick="calculate()">=</button>
                 <button onclick="clearDisplay()" class="operator-btn">C</button>
+                <button onclick="appendToDisplay('√')" class="operator-btn">&radic;</button>
+                <button onclick="appendToDisplay('x^2')" class="operator-btn">x^2</button>
             </div>
         </div>
 
-        <script src="main.js"></script>
+        <script src="main.js"></script><!-- Script beágyazása a HTML-be -->
 </body>
 </html>
